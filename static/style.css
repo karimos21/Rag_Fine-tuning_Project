@@ -1,0 +1,195 @@
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	display: flex;
+	height: 100vh;
+	background-color: #181818; /* Dark background */
+	overflow: hidden; /* Prevent scrollbars */
+}
+
+.chat-wrapper {
+	display: flex;
+	width: 100%;
+	min-width: 70px;
+	height: 100%;
+}
+
+.chat-menu {
+	background-color: #282c34; /* Darker gray menu background */
+	padding: 20px;
+	width: 300px; /* Adjust width as needed */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	position: relative; /* For the close button */
+}
+
+.chat-menu h2 {
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+	color: #fff; /* White text for contrast */
+}
+
+.chat-menu .form-group label {
+	font-weight: bold;
+	color: #ddd; /* Lighter gray for labels */
+}
+
+.chat-container {
+	background-color: #282c34; /* Darker gray chat container background */
+	flex-grow: 1;
+	padding: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	position: relative; /* For the toggle button */
+}
+
+/* Chat Area Styling */
+.msg_card_body {
+	height: 500px; /* Adjust height as needed */
+	overflow-y: auto;
+}
+
+.msg_cotainer,
+.msg_cotainer_send {
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	word-wrap: break-word; /* Wrap long words */
+}
+
+.msg_cotainer {
+	background-color: #333; /* Darker gray for received messages */
+	color: #ddd; /* Lighter gray for text */
+	max-width: 50%;
+}
+
+.msg_cotainer_send {
+	background-color: #af774c; /* Green for send messages */
+	color: #fff;
+	max-width: 50%;
+}
+
+.msg_time,
+.msg_time_send {
+	font-size: 12px;
+	color: #ddd; /* Lighter gray for time */
+	margin-left: 10px; /* Add space between message and time */
+}
+
+.img_cont_msg,
+.img_cont {
+	margin: 5px;
+}
+
+.user_img_msg,
+.user_img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.chat-wrapper {
+		flex-direction: column;
+	}
+
+	.chat-menu {
+		width: 100%;
+		height: auto;
+	}
+
+	.chat-container {
+		width: 100%;
+	}
+}
+
+/* Modern Styling */
+.chat-menu {
+	border-right: 1px solid #ddd; /* Subtle border */
+}
+
+.chat-menu h2 {
+	text-align: center;
+}
+
+.chat-menu .form-group label {
+}
+
+.chat-container {
+	border-radius: 10px;
+}
+
+.send_btn {
+	background-color: #4CAF50; /* Green for send button */
+	border: none;
+	color: #fff;
+}
+
+.send_btn:hover {
+	background-color: #45a049; /* Darker green on hover */
+}
+
+/* Card Styling to Match Chat Container */
+.card {
+	background-color: transparent; /* Remove card background */
+	border: none; /* Remove card border */
+	box-shadow: none; /* Remove card shadow */
+	width: 100%; /* Make card full width */
+	height: 100%; /* Make card full height */
+}
+
+.card-header {
+	padding: 0; /* Remove card header padding */
+}
+
+.card-body {
+	padding: 0; /* Remove card body padding */
+}
+
+.card-footer {
+	padding: 0; /* Remove card footer padding */
+}
+
+.msg_head {
+	background-color: #282c34; /* Match chat container background */
+	padding: 10px 20px; /* Add some padding for the header */
+	border-bottom: 1px solid #ddd; /* Add a subtle border */
+}
+
+.img_cont img {
+	/* Style the chatbot image */
+}
+
+.user_info {
+	color: #fff;
+	font-size: larger;
+	font: optional;
+}
+
+
+/* Toggle Button */
+.toggle-button {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: transparent;
+	border: none;
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+
+/* Styles for the toggle button icon */
+.toggle-button i {
+	font-size: 24px;
+}
+
+/* Styles when the menu is hidden */
+.chat-menu.hidden {
+	display: none;
+}
+
+/* Styles when the chat container is expanded */
+.chat-container.expanded {
+	width: 100%;
+}
